@@ -44,7 +44,6 @@ class Home extends Component {
                     ...categories, [e.target.name]: !categories[e.target.name]
                 }
                 let filteredData = filterCategoryBasedData(data, updateExistingCategory);
-                console.log("FilteredData", filteredData);
                 this.setState({
                     categories: updateExistingCategory,
                     filteredData
@@ -56,7 +55,6 @@ class Home extends Component {
                     [e.target.name]: true
                 };
                 let filteredData = filterCategoryBasedData(data, existingCategory);
-                console.log("FilteredData", filteredData)
                 this.setState({
                     categories: existingCategory,
                     filteredData
@@ -64,9 +62,7 @@ class Home extends Component {
             }
         }
         if (filterType === "price") {
-            console.log("Price", e.target.name);
             let filteredData = filterPrice(this.state.filteredData, e.target.name);
-            console.log("FilteredData", filteredData);
             this.setState({ price: e.target.name })
         }
     }

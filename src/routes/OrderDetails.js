@@ -58,7 +58,6 @@ const OrderDetails = ({ location, match }) => {
             </h2>
         )
     }
-    console.log(isCanceled, success)
     return (
         <div>
             <h3 className="text-center mt-4 mb-4">Order Summary</h3>
