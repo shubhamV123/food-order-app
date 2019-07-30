@@ -13,7 +13,11 @@ const OrderList = () => {
     }, [])
 
 
-    if (loading) return <div>Loading...</div>
+    if (loading) return <div>Loading...</div>;
+    if (list.length === 0) return <h2 className='text-center mt-3'>
+        Your cart is Empty.
+                <ButtonCenter link={"/"} text={" Place Order"} />
+    </h2>
     return (
         <div>
             <h3 className="text-center mt-4 mb-4">Order List</h3>
@@ -28,7 +32,8 @@ const OrderList = () => {
                     </thead>
                     <tbody>
                         {
-                            list.map(data => <ListView data={data} />)
+                            list.map(data =>
+                                < ListView data={data} />)
                         }
                     </tbody>
                 </Table>

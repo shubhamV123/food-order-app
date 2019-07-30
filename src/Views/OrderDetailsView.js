@@ -8,9 +8,9 @@ const OrderDetailsView = ({ data }) => {
             let { name, qty, price, discounts } = data[order]
             return <tr key={name + qty}>
                 <th scope="row">{name}</th>
-                <td>{price}</td>
+                <td>&#8377; {price}</td>
                 <td>{qty}</td>
-                <td>{`${discounts ? discounts : "none"}`}</td>
+                <td>{`${discounts ? discounts : "-"}`}</td>
             </tr>
         })
     }

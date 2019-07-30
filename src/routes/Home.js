@@ -108,7 +108,7 @@ class Home extends Component {
                         pathname: `/details/` + Math.random().toString(36).substring(7),
                         state: { selectedData, totalPrice },
                     }}>
-                        <Button outline color="success" className="mr-2 mt-2" >
+                        <Button outline disabled={Object.keys(selectedData).length === 0} color="success" className="mr-2 mt-2" >
                             Go to cart
                         </Button>
                     </Link>

@@ -12,8 +12,8 @@ const ListView = ({ data, history }) => {
             }
         })}>
             <th scope="row">{orderId}</th>
-            <td>{data.totalPrice}</td>
-            <td>{"Success"}</td>
+            <td>&#8377; {data.totalPrice}</td>
+            <td>{data.status ? data.status : "-"}</td>
         </tr>
     )
 }
